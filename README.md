@@ -5,4 +5,6 @@ Professor da Diciplina: Alisson
 
 Curso: Sistemas de Informação
 
-Faculdade: Toledo Prudente
+Faculdade: Toledo Presidente Prudente
+
+Semestre: 02/2025
