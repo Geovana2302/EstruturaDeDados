@@ -1,0 +1,46 @@
+# Project: Trabalho Recursividade
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = Exercicio1.o Exercicio2.o Exercicio3.o Exercicio4.o Exercicio5.o main.o menu.o
+LINKOBJ  = Exercicio1.o Exercicio2.o Exercicio3.o Exercicio4.o Exercicio5.o main.o menu.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "Trabalho Recursividade.exe"
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Exercicio1.o: Exercicio1.c
+	$(CC) -c Exercicio1.c -o Exercicio1.o $(CFLAGS)
+
+Exercicio2.o: Exercicio2.c
+	$(CC) -c Exercicio2.c -o Exercicio2.o $(CFLAGS)
+
+Exercicio3.o: Exercicio3.c
+	$(CC) -c Exercicio3.c -o Exercicio3.o $(CFLAGS)
+
+Exercicio4.o: Exercicio4.c
+	$(CC) -c Exercicio4.c -o Exercicio4.o $(CFLAGS)
+
+Exercicio5.o: Exercicio5.c
+	$(CC) -c Exercicio5.c -o Exercicio5.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+menu.o: menu.c
+	$(CC) -c menu.c -o menu.o $(CFLAGS)
